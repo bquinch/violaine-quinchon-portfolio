@@ -29,3 +29,13 @@
     box-shadow: none;
   }
 }
+
+.contact-container {
+  background-color: $yellow;
+}
+
+@media(max-width: 902px) {
+  .presentation-card {
+    flex-direction: column;
+  }
+}

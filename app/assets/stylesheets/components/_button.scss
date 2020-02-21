@@ -1,14 +1,11 @@
 .btn-violaine-primary {
-  background: $light-gray;
+  background: $orange;
   color: rgba(0,0,0,0.7) !important;
   padding: .5rem 1rem;
-  border: none;
-  transition: backgound .3s;
   border: 1px solid $orange;
-  transition: background .3s;
+  transition: color .2s;
 
   &:hover {
-    background: $orange;
     color: $light-gray !important;
   }
 }
