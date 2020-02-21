@@ -1,0 +1,31 @@
+.new-message-form-container {
+  flex-grow: 1;
+}
+
+.presentation-card__image {
+  flex: 0 0 40%;
+}
+
+.new-message-form-container__title {
+  font-size: 1rem;
+  color: rgba(0,0,0,0.7);
+  text-align: start;
+  border-bottom: 1px solid $orange;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid $orange;
+  background: none;
+
+  &::placeholder {
+    color: #AAAAAA;
+  }
+
+  &:focus {
+    border: none;
+    border-bottom: 1px solid $orange;
+    background: none;
+    box-shadow: none;
+  }
+}

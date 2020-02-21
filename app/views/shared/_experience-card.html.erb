@@ -1,0 +1,20 @@
+<div class="row my-3 experience-card" data-aos="fade-up" data-aos-delay="50">
+  <div class="col-3 experience-card__left">
+    <div class="experience-card__left__year">
+      <p><%= @experience.start_date.year %> -
+        <% if @experience.end_date.year == Date.today.year && @experience.end_date.month == Date.today.month %>
+          Aujourd'hui</p>
+        <% else %>
+          <%= @experience.end_date.year %></p>
+        <% end %>
+    </div>
+    <%= image_tag @experience.company_logo_url, alt: "#{@experience.company}-logo", width: 70, height: 70, crop: :fill %>
+  </div>
+  <div class="col-9 border-left">
+    <div class="experience-card__right">
+      <h1 class='experience-card__right__company'><%= @experience.company %></h1>
+      <p class='experience-card__right__role'><em><%= @experience.role %></em></p>
+      <p class='experience-card__right__description'><%= @experience.description %></p>
+    </div>
+  </div>
+</div>

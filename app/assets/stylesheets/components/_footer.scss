@@ -1,0 +1,26 @@
+.footer-violaine {
+  min-height: 25vh;
+  background: $orange;
+}
+
+.footer-link {
+  color: rgba(255,255,255,0.77);
+  text-decoration: none;
+  transition: .1s;
+
+  &:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,0.97);
+  }
+}
+
+.footer-text {
+  color: rgba(255,255,255,0.77);
+  margin-bottom: 2rem;
+}
+
+@media(max-width: 540px) {
+  .container {
+    max-width: 90vw;
+  }
+}
