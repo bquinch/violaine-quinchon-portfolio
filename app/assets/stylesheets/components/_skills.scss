@@ -1,0 +1,19 @@
+.skills-card {
+  text-align: center;
+}
+
+.skills-container {
+  background-color: $yellow-opaque;
+
+  h1 {
+    font-size: 1rem;
+    border-bottom: 1px solid $orange;
+    padding-bottom: .5rem;
+    color: rgba(0,0,0,0.7);
+  }
+
+  p {
+    margin-bottom: 0px;
+    color: rgba(0,0,0,0.5);
+  }
+}
