@@ -2,7 +2,7 @@
   <div class="col-3 experience-card__left">
     <div class="experience-card__left__year">
       <p><%= @experience.start_date.year %> -
-        <% if @experience.end_date.year == Date.today.year && @experience.end_date.month == Date.today.month %>
+        <% if @experience.current %>
           Aujourd'hui</p>
         <% else %>
           <%= @experience.end_date.year %></p>

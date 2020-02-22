@@ -16,9 +16,9 @@
         <strong>ADMINISTRATION</strong>
         <br>
         <% if user_signed_in? %>
-          <%= link_to 'Ajouter projet', new_experience_path, class: 'footer-link' %>
+          <%= link_to 'Ajouter experience', new_experience_path, class: 'footer-link' %>
           <br>
-          <%= link_to 'Editer / Supprimer des projets', experiences_path, class: 'footer-link' %>
+          <%= link_to 'Editer / Supprimer des experiences', experiences_path, class: 'footer-link' %>
           <br>
           <em><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "footer-link" %></em>
         <% else %>
