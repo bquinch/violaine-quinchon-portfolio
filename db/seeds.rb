@@ -3,6 +3,7 @@ Experience.destroy_all
 Experience.create(
   start_date: Date.new(2018,1,1),
   end_date: Date.new,
+  current: true,
   company: 'Capgemini',
   category: 'Travail',
   role: 'Responsable communication interne - pôle éditorial',
@@ -13,6 +14,7 @@ Experience.create(
 Experience.create(
   start_date: Date.new(2011,7,1),
   end_date: Date.new(2017,12,1),
+  current: false,
   company: 'Capgemini',
   category: 'Travail',
   role: 'Responsable communication interne',
@@ -27,6 +29,7 @@ dans le triple objectif d’informer, engager et fédérer les 7 000 collaborate
 Experience.create(
   start_date: Date.new(2008,9,1),
   end_date: Date.new(2009,9,1),
+  current: false,
   company: 'Capgemini',
   category: 'Travail',
   role: 'Stagiaire communication',
@@ -38,6 +41,7 @@ Experience.create(
 Experience.create(
   start_date: Date.new(2008,9,1),
   end_date: Date.new(2009,6,1),
+  current: false,
   company: 'Université Paris 13',
   category: 'Études',
   role: "Master 1 Métiers de l'information et de la communication - Mention Très Bien",
@@ -49,6 +53,7 @@ Experience.create(
 Experience.create(
   start_date: Date.new(2005,9,1),
   end_date: Date.new(2007,6,1),
+  current: false,
   company: 'Université Paris-Sorbonne',
   category: 'Études',
   role: "Master 2 (M2) Lettres classiques - Mention Très Bien",
@@ -60,6 +65,7 @@ Mémoire de Master 2 : L'amitié et la haine en question dans les tragédies de 
 Experience.create(
   start_date: Date.new(2015,9,1),
   end_date: Date.new(2017,6,1),
+  current: false,
   company: 'COGE Musique en Grandes Ecoles',
   role: "Responsable communications",
   category: 'Bénévolat',

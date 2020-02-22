@@ -2,7 +2,7 @@ class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :set_experience, only: %i[edit update destroy]
   def index
-    @experiences = Experience.all
+    @experiences = Experience.all.order('start_date desc')
   end
 
   def new
@@ -10,9 +10,9 @@ class ExperiencesController < ApplicationController
   end
 
   def create
-    @experience = Experience.find(experience_params)
+    @experience = Experience.new(experience_params)
     if @experience.save
-      redirect_to experiences_path, notice: 'Expérience ajoutée'
+      redirect_to root_url, notice: 'Expérience ajoutée'
     else
       render :new, notice: 'Informations incorrectes'
     end

@@ -1,0 +1,22 @@
+<div class="new-experience-container mt-5 col-md-6 col-sm-12 mx-auto">
+  <div class="new-experience-form-container text-center bg-white p-3 border">
+    <div class="d-flex justify-content-between align-items-center mb-2 border-bottom">
+      <h1 class='new-experience-container__title text-center' style='font-size: 1rem'><strong>Ajouter une expérience</strong></h1>
+      <%= link_to "Retour au site", root_url %>
+    </div>
+    <%= simple_form_for @experience do |f| %>
+      <div class="form-inputs text-justify">
+        <%= f.input :company, placeholder: "Nom de l'entreprise", label: false %>
+        <%= f.input :description, placeholder: "Description de l'experience", label: false %>
+        <%= f.input :role, placeholder: "Poste tenu", label: false %>
+        <%= f.input :category, placeholder: "Quel type d'experience ?", label: false,
+          collection: %w[Travail Études Bénévolat] %>
+        <%= f.input :current, label: "Poste actuel ?" %>
+        <%= f.input :start_date, as: :string, placeholder: 'Date de début', input_html: { class: "datepicker" }, label: false %>
+        <%= f.input :end_date, as: :string, placeholder: 'Date de fin', input_html: { class: "datepicker" }, label: false %>
+        <%= f.submit 'Valider', class: 'btn-violaine-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
