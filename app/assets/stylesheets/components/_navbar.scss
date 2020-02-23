@@ -1,18 +1,17 @@
 .navbar-lewagon {
   justify-content: space-around;
-  background: $light-gray;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .bg-orange {
-  background-color: $orange !important;
+  background: $orange !important;
 }
 
 .navbar {
-  background-color: $light-gray;
-  transition: background-color .3s;
+  background: linear-gradient(180deg, $light-gray 0%, $light-gray 65%, transparent 100%);;
+  transition: background .3s;
 }
 
 .navbar .container{
