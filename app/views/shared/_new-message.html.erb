@@ -1,11 +1,11 @@
 <div class="contact-container">
   <div class="container">
-    <div class="presentation-card d-flex justify-content-between align-items-center py-5" id='contact' data-aos="fade">
+    <div class="presentation-card d-flex justify-content-between align-items-center py-5" id='contact'>
       <div class="new-message-form-container p-3">
         <div class="mb-2">
           <h1 class="new-message-form-container__title pb-3 pl-3">Contact</h1>
         </div>
-        <%= simple_form_for @message, url: messages_path do |f| %>
+        <%= simple_form_for @message, url: messages_path, id: 'myform' do |f| %>
           <div class="form-inputs">
             <div class="form-row">
               <div class="col-5">
@@ -18,7 +18,7 @@
             <%= f.input :subject, placeholder: 'Sujet du message...', label: false  %>
             <%= f.input :content, placeholder: 'Votre message...', label: false, input_html: { rows: 4 } %>
           </div>
-          <%= f.submit 'Envoyer le message', class: 'btn-violaine-primary' %>
+          <a href='#' onclick='document.forms["myform"].submit(); return false;' class='btn-violaine-primary hvr-sweep-to-top'>Submit</a>
         <% end %>
       </div>
       <div class='presentation-card__image pl-5' data-aos="fade-left" ><%= image_tag "chat_person.svg", alt: "chat", width: '100%' %></div>
