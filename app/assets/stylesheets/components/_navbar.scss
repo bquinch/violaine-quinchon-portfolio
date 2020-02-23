@@ -25,3 +25,19 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-toggler-icon {
+  background-image: url('VQ.png') !important;
+}
+
+.navbar-toggler {
+  border-radius: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button:focus {
+  outline: none;
+}

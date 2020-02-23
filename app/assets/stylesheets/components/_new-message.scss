@@ -2,6 +2,10 @@
   flex-grow: 1;
 }
 
+.presentation-card {
+  overflow-x: hidden;
+}
+
 .presentation-card__image {
   flex: 0 0 40%;
 }
