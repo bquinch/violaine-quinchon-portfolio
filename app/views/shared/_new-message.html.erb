@@ -18,7 +18,7 @@
             <%= f.input :subject, placeholder: 'Sujet du message...', label: false  %>
             <%= f.input :content, placeholder: 'Votre message...', label: false, input_html: { rows: 4 } %>
           </div>
-          <a href='#' onclick='document.forms["myform"].submit(); return false;' class='btn-violaine-primary hvr-sweep-to-top'>Submit</a>
+          <%= f.submit 'Envoyer le message', class: 'btn-violaine-primary' %>
         <% end %>
       </div>
       <div class='presentation-card__image pl-5' data-aos="fade-left" ><%= image_tag "chat_person.svg", alt: "chat", width: '100%' %></div>
