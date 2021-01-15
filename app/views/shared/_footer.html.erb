@@ -26,11 +26,11 @@
       <div class="col-lg-3 col-10 col-sm-6 col-md-4 footer-text border-left px-auto mx-auto">
         <strong>CONTACT</strong>
         <br>
-        Violaine Quinchon
+        <%= User.first.first_name + " " + User.first.last_name %>
         <br>
         <em>Responsable communication interne</em>
         <br>
-        <a href="mailto:violainequinchon@gmail.com" class="footer-link">violainequinchon@gmail.com</a>
+        <a href="mailto:<%= User.first.email %>" class="footer-link"><%= User.first.email %></a>
         <br>
         <a href="tel:+33664187470" class='footer-link'><i class="fas fa-mobile-alt"></i> - 06 64 18 74 70</a>
         <br>

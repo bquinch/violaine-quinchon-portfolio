@@ -5,33 +5,31 @@
       <div class="col-lg-4 col-sm-6 col-10">
         <div class="skills-card p-4">
           <%= image_tag "team_work.svg", alt: "team_work", width: '100%', class: 'skills-card__image mb-3' %>
-          <h1>Communication</h1>
-          <p>Gestion de projet</p>
-          <p>Marketing digital</p>
-          <p>Change managment</p>
-          <p>Gestion Prestataires</p>
-          <p>Newsletters</p>
+          <% comms = Skill.where(category: "Communication") %>
+          <h1><%= comms.first.category %></h1>
+          <% comms.each do |com| %>
+            <p><%= com.name %></p>
+          <% end %>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 col-10">
         <div class="skills-card p-4">
           <%= image_tag "team_connect.svg", alt: "team_work", width: '100%', class: 'skills-card__image mb-3' %>
-          <h1>Technologies</h1>
-          <p>CMS</p>
-          <p>Photoshop</p>
-          <p>Suite Office</p>
+          <% techs = Skill.where(category: "Technologies") %>
+          <h1><%= techs.first.category %></h1>
+          <% techs.each do |tech| %>
+            <p><%= tech.name %></p>
+          <% end %>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 col-10">
         <div class="skills-card p-4">
           <%= image_tag "gallery.svg", alt: "team_work", width: '100%', class: 'skills-card__image mb-3' %>
-          <h1>Soft Skills</h1>
-          <p>Esprit d'équipe</p>
-          <p>Rédaction</p>
-          <p>Animation</p>
-          <p>Synthèse</p>
-          <p>Chant chorale</p>
-          <p>Langues vivantes</p>
+          <% softs = Skill.where(category: "Soft Skills") %>
+          <h1><%= softs.first.category %></h1>
+          <% softs.each do |soft| %>
+            <p><%= soft.name %></p>
+          <% end %>
         </div>
       </div>
     </div>
