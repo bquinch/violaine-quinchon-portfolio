@@ -15,7 +15,7 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.included_models = [ "Experience", "User" ]
+  config.included_models = [ "Experience", "Skill", "User" ]
 
   ## == CancanCan ==
   # config.authorize_with :cancancan
