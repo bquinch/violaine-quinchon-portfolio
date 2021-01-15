@@ -1,5 +1,5 @@
 class Experience < ApplicationRecord
-  validates :company, :role, :category, :description, :current, presence: true
+  validates :company, :role, :category, :description, presence: true
   validate :end_date_after_start_date
 
   private
