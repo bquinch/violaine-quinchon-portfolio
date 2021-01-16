@@ -15,7 +15,7 @@
         <% @experience = experience %>
         <%= render 'shared/index-experience-card', object: @experience %>
       <% end %>
-      <div class="bg-white border p-3 my-1"><em>Bénévolat</em></div>
+      <div class="bg-white border p-3 my-1"><em>Centres d'intérêt</em></div>
       <% @experiences.where('category = ?', 'Bénévolat').each do |experience| %>
         <% @experience = experience %>
         <%= render 'shared/index-experience-card', object: @experience %>

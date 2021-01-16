@@ -15,7 +15,32 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.included_models = [ "Experience", "Skill", "User" ]
+  config.included_models = [ "Experience", "Resume", "Skill", "User" ]
+
+  config.model 'Experience' do
+    field :category, :enum do
+      enum do
+        ["Travail", "Études", "Centres d'intérêt"]
+      end
+    end
+    field :company
+    field :role
+    field :description
+    field :company_logo_url
+    field :current
+    field :photo
+    field :start_date
+    field :end_date
+  end
+
+  config.model 'Skill' do
+    field :name
+    field :category, :enum do
+      enum do
+        ["Communication", "Technologies", "Soft Skills"]
+      end
+    end
+  end
 
   ## == CancanCan ==
   # config.authorize_with :cancancan

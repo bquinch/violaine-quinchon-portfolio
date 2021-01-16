@@ -1,7 +1,12 @@
 class Experience < ApplicationRecord
   validates :company, :role, :category, :description, presence: true
+  validates :category, inclusion: { in: ["Travail", "Études", "Centres d'intérêt"] }
   validate :end_date_after_start_date
   has_one_attached :photo
+
+  def category_enum
+    ["Travail", "Études", "Centres d'intérêt"]
+  end
 
   private
 
