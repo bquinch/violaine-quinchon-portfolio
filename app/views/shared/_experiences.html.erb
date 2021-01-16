@@ -10,7 +10,7 @@
     <%= render 'shared/experience-card', object: @experience %>
   <% end %>
   <div class="text-center p-3 my-3 experiences__header" data-aos="fade-right" data-aos-delay="50">Bénévolat</div>
-  <% @experiences.where('category = ?', 'Bénévolat').each do |experience| %>
+  <% @experiences.where('category = ?', "Centres d'intérêt").each do |experience| %>
     <% @experience = experience %>
     <%= render 'shared/experience-card', object: @experience %>
   <% end %>
