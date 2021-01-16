@@ -8,7 +8,6 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.4'
 gem 'redis'
-gem 'mailgun-ruby', '~> 1.2'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -18,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'rails_admin', '~> 2.0'
 gem 'cloudinary', '~> 1.16.0'
+gem 'sendgrid-ruby'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

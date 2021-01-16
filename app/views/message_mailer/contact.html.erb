@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="">
+  </head>
+  <body style="max-width: 700px; margin: 0 auto">
+    <p>Vous avez reçu un message depuis le site violaine-quinchon.herokuapp.com</p>
+    <hr>
+    <h2>Sujet: </h2>
+    <%= @message.subject %>
+    <hr>
+
+    <h3>Message: </h3>
+    <%= @message.content %>
+    <hr>
+
+  </body>
+
+</html>

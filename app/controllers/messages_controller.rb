@@ -4,9 +4,9 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.valid?
-      MessageMailer.contact(@message).deliver_now
-      redirect_to root_url(anchor: 'contact'), notice: "Merci pour votre message, je vous répondrai dès que possible !"
       @message.save
+      MessageMailer.contact(@message).deliver_later
+      redirect_to root_url(anchor: 'contact'), notice: "Merci pour votre message, je vous répondrai dès que possible !"
     else
       redirect_to root_url(anchor: 'contact'), notice: 'Informations incomplètes'
     end

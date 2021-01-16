@@ -1,15 +1,23 @@
 class MessageMailer < ApplicationMailer
-  require 'mailgun-ruby'
-
   def contact(message)
-    @name = message.name
-    @content = message.content
-
-    mg_client = Mailgun::Client.new ENV['MAILGUN_API_KEY']
-    message_params = {:from => message.email,
-                      :to => 'violainequinchon@gmail.com',
-                      :subject => message.subject,
-                      :text => message.content}
-    mg_client.send_message 'sandboxf777fcf6c09047d0a1b259b62580524b.mailgun.org', message_params
+    @message = message
+    message_params = {
+      from: 'violainequinchon@gmail.com',
+      to: 'violainequinchon@gmail.com',
+      subject: message.subject,
+      text: message.content,
+      reply_to: message.email,
+    }
+    mail(message_params)
+  # If anything goes wrong, send to bquinchon
+  rescue => e
+    message_params = {
+      from: 'basile.quinchon@gmail.com',
+      to: 'basile.quinchon@gmail.com',
+      subject: "Error sending mail with subject: #{message.subject}",
+      text: "#{message.content} #{e.message}",
+      reply_to: message.email,
+    }
+    mail(message_params)
   end
 end

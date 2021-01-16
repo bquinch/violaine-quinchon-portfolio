@@ -64,7 +64,21 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "violaine-quinchon-portfolio_#{Rails.env}"
 
+  domain = "http://violaine-quinchon.herokuapp.com"
+
   config.action_mailer.perform_caching = false
+  ActionMailer::Base.smtp_settings = {
+      port:           '587',
+      address:        'smtp.sendgrid.net',
+      user_name:      ENV['SENDGRID_USERNAME'],
+      password:       ENV['SENDGRID_APIKEY'],
+      domain:         ENV['SMTP_DOMAIN'],
+      authentication: 'plain'
+  }
+  ActionMailer::Base.delivery_method = :smtp
+
+  config.action_mailer.default_url_options = { host: domain }
+  routes.default_url_options = { host: domain, protocol: :https }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -92,10 +106,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-   api_key: 'ENV["MAILGUN_API_KEY"]',
-   domain: 'sandboxf777fcf6c09047d0a1b259b62580524b.mailgun.org',
-  }
 end
