@@ -42,6 +42,10 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Resume' do
+    field :description
+  end
+
   ## == CancanCan ==
   # config.authorize_with :cancancan
 
