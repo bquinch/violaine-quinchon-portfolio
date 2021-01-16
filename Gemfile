@@ -19,7 +19,6 @@ gem 'rails_admin', '~> 2.0'
 gem 'cloudinary', '~> 1.16.0'
 gem 'sendgrid-ruby'
 gem 'rubocop', require: false
-gem 'code-scanning-rubocop'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
