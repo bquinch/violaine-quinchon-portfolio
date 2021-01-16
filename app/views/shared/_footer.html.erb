@@ -1,7 +1,7 @@
 <div class="footer-violaine py-4 mx-auto px-auto">
   <div class="container">
     <div class="row align-items-baseline">
-      <div class="col-lg-3 col-10 col-sm-6 col-md-4 footer-text border-left px-auto mx-auto">
+      <div class="col-lg-2 col-10 col-sm-6 col-md-2 footer-text border-left px-auto mx-auto">
         <strong>MENU</strong>
         <br>
         <a class='footer-link' href="#">
@@ -16,14 +16,14 @@
         <strong>ADMINISTRATION</strong>
         <br>
         <% if user_signed_in? %>
-          <%= link_to 'Editer / Supprimer des experiences', rails_admin_path, class: 'footer-link' %>
+          <%= link_to 'Administration', rails_admin_path, class: 'footer-link' %>
           <br>
           <em><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "footer-link" %></em>
         <% else %>
           <%= link_to 'Admin', new_user_session_path, class: 'footer-link' %>
         <% end %>
       </div>
-      <div class="col-lg-3 col-10 col-sm-6 col-md-4 footer-text border-left px-auto mx-auto">
+      <div class="col-lg-4 col-10 col-sm-6 col-md-5 footer-text border-left px-auto mx-auto">
         <strong>CONTACT</strong>
         <br>
         <%= User.first.first_name + " " + User.first.last_name %>
