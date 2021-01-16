@@ -15,7 +15,7 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.included_models = [ "Experience", "Resume", "Skill", "User" ]
+  config.included_models = [ "Experience", "Resume", "Skill", "Cv", "User" ]
 
   config.model 'Experience' do
     field :category, :enum do

@@ -32,3 +32,17 @@
   color: rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid $orange;
 }
+
+.experiences-container {
+  hr { border-top: 1px solid $orange; }
+
+  .cv-button--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cv-button {
+    margin: 0 auto;
+  }
+}
