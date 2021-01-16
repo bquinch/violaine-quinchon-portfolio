@@ -38,7 +38,11 @@
 
       </div>
       <div class="col-lg-3 col-10 col-sm-6 col-md-4 footer-text border-left px-auto mx-auto">
-        Site construit par <a class="footer-link" href="https://www.basilequinchon.com"><em>Basile Quinchon</em></a>
+        <p>Un problème sur le site ? Contactez
+          <a href="mailto:<%= ENV["DEVELOPER_EMAIL_ADDRESS"] %>" class="footer-link" style="text-decoration: underline">
+            <%= ENV["DEVELOPER_EMAIL_ADDRESS"] %>
+          </a>
+      </p>
       </div>
     </div>
   </div>

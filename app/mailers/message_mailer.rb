@@ -12,8 +12,8 @@ class MessageMailer < ApplicationMailer
   # If anything goes wrong, send to bquinchon
   rescue => e
     message_params = {
-      from: 'basile.quinchon@gmail.com',
-      to: 'basile.quinchon@gmail.com',
+      from: ENV["DEVELOPER_EMAIL_ADDRESS"],
+      to: ENV["DEVELOPER_EMAIL_ADDRESS"],
       subject: "Error sending mail with subject: #{message.subject}",
       text: "#{message.content} #{e.message}",
       reply_to: message.email,
