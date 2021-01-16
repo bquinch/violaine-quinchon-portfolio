@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'rails_admin', '~> 2.0'
+gem 'cloudinary', '~> 1.16.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

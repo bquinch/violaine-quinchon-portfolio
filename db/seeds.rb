@@ -1,8 +1,8 @@
 Experience.destroy_all
 
-Experience.create(
+Experience.create!(
   start_date: Date.new(2018,1,1),
-  end_date: Date.new,
+  end_date: Date.today,
   current: true,
   company: 'Capgemini',
   category: 'Travail',
@@ -11,7 +11,7 @@ Experience.create(
   company_logo_url: 'https://media-exp1.licdn.com/dms/image/C510BAQFoHzR2wowTgQ/company-logo_200_200/0?e=1590624000&v=beta&t=kXSCEOUQRkH_0XBIRPKm_sSlx9arvF3xtC7XAl-SKZA'
 )
 
-Experience.create(
+Experience.create!(
   start_date: Date.new(2011,7,1),
   end_date: Date.new(2017,12,1),
   current: false,
@@ -26,7 +26,7 @@ dans le triple objectif d’informer, engager et fédérer les 7 000 collaborate
   company_logo_url: 'https://media-exp1.licdn.com/dms/image/C510BAQFoHzR2wowTgQ/company-logo_200_200/0?e=1590624000&v=beta&t=kXSCEOUQRkH_0XBIRPKm_sSlx9arvF3xtC7XAl-SKZA'
 )
 
-Experience.create(
+Experience.create!(
   start_date: Date.new(2008,9,1),
   end_date: Date.new(2009,9,1),
   current: false,
@@ -38,7 +38,7 @@ Experience.create(
   company_logo_url: 'https://media-exp1.licdn.com/dms/image/C510BAQFoHzR2wowTgQ/company-logo_200_200/0?e=1590624000&v=beta&t=kXSCEOUQRkH_0XBIRPKm_sSlx9arvF3xtC7XAl-SKZA'
 )
 
-Experience.create(
+Experience.create!(
   start_date: Date.new(2008,9,1),
   end_date: Date.new(2009,6,1),
   current: false,
@@ -50,7 +50,7 @@ Experience.create(
   company_logo_url: 'https://media-exp1.licdn.com/dms/image/C560BAQGOqph9-sp_8g/company-logo_200_200/0?e=1590624000&v=beta&t=id1dChBUDz7icmxsBXkfuCIb0Uq71ucPLc4Njh9Z1kc'
 )
 
-Experience.create(
+Experience.create!(
   start_date: Date.new(2005,9,1),
   end_date: Date.new(2007,6,1),
   current: false,
@@ -62,7 +62,7 @@ Mémoire de Master 2 : L'amitié et la haine en question dans les tragédies de 
   company_logo_url: 'https://media-exp1.licdn.com/dms/image/C560BAQH2kFzReYoR-A/company-logo_200_200/0?e=1590624000&v=beta&t=MzDF4GK8E5YBQj_noGRCUt_fgGFv3LrPmKn7Yez7WDI'
 )
 
-Experience.create(
+Experience.create!(
   start_date: Date.new(2015,9,1),
   end_date: Date.new(2017,6,1),
   current: false,

@@ -1,6 +1,7 @@
 class Experience < ApplicationRecord
   validates :company, :role, :category, :description, presence: true
   validate :end_date_after_start_date
+  has_one_attached :photo
 
   private
 

@@ -8,7 +8,12 @@
           <%= @experience.end_date.year %></p>
         <% end %>
     </div>
-    <%= image_tag @experience.company_logo_url, alt: "#{@experience.company}-logo", width: 70, height: 70, crop: :fill %>
+    <% if @experience.photo.attachment.present? %>
+      <%= cl_image_tag @experience.photo.key, height: 70, width: 70, crop: :fill, alt: "#{@experience.company}-logo" %>
+    <% else %>
+      <%= image_tag @experience.company_logo_url, alt: "#{@experience.company}-logo", width: 70, height: 70, crop: :fill %>
+    <% end %>
+
   </div>
   <div class="col-9 border-left">
     <div class="experience-card__right">
