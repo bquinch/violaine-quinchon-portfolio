@@ -62,7 +62,6 @@ jobs:
           POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
           POSTGRES_DB: rspec_crud_test
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
-          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
         run: |
           cp config/database.yml config/database.yml.ci
           bundle exec rails db:create
@@ -70,6 +69,7 @@ jobs:
       - name: Run tests
         env:
           DEVELOPER_EMAIL_ADDRESS: ${{ env.DEVELOPER_EMAIL_ADDRESS }}
+          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
         run: bundler exec rspec
       - name: Upload coverage results
         uses: actions/upload-artifact@master
