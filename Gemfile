@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.0'
+ruby '2.6.6'
 
 gem 'bootsnap', require: false
 gem 'devise'
@@ -18,8 +18,6 @@ gem 'webpacker'
 gem 'rails_admin', '~> 2.0'
 gem 'cloudinary', '~> 1.16.0'
 gem 'sendgrid-ruby'
-gem 'rubocop', require: false
-gem 'code-scanning-rubocop'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -32,4 +30,11 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'code-scanning-rubocop'
+end
+
+group :test do
+  gem 'factory_bot_rails'
 end

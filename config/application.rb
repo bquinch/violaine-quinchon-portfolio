@@ -22,3 +22,7 @@ module ViolaineQuinchonPortfolio
     # the framework and any gems in your application.
   end
 end
+
+Rails.application.config.assets.configure do |env|
+  env.export_concurrent = false
+end

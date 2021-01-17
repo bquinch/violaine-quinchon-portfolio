@@ -10,7 +10,7 @@ class MessageMailer < ApplicationMailer
     }
     mail(message_params)
   # If anything goes wrong, send to bquinchon
-  rescue => e
+  rescue Net::SMTPFatalError => e
     message_params = {
       from: ENV["DEVELOPER_EMAIL_ADDRESS"],
       to: ENV["DEVELOPER_EMAIL_ADDRESS"],

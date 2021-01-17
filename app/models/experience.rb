@@ -16,4 +16,3 @@ class Experience < ApplicationRecord
     errors.add(:end_date, "La date de début doit être après la date de fin") if end_date < start_date
   end
 end
-
