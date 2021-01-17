@@ -3,15 +3,15 @@ class PagesController < ApplicationController
   protect_from_forgery except: [:sendgrid_webhooks]
 
   def home
-    @experiences = Experience.all.order('start_date desc')
+    @experiences = Experience.all.order("start_date desc")
     @message = Message.new
   end
 
   def sendgrid_webhooks
     params["_json"].each do |payload|
-      @message.create(
+      Message.create(
         subject: "Sendgrid response",
-        content: payload["smtp-id"],
+        content: "#{payload["smtp-id"]}_#{payload["event"]}",
         name: "SG_WEBHOOK",
         email: ENV["DEVELOPER_EMAIL_ADDRESS"]
       )
