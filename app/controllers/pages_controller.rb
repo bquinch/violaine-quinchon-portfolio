@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
+  protect_from_forgery except: [:sendgrid]
 
   def home
     @experiences = Experience.all.order('start_date desc')
