@@ -2,7 +2,7 @@ class MessageMailer < ApplicationMailer
   def contact(message)
     @message = message
     message_params = {
-      from: 'violainequinchon@gmail.com',
+      from: ENV["DEVELOPER_EMAIL_ADDRESS"],
       to: 'violainequinchon@gmail.com',
       subject: message.subject,
       text: message.content,
