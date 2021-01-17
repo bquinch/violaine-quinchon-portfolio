@@ -8,10 +8,12 @@
           <%= @experience.end_date.year %></p>
         <% end %>
     </div>
-    <% if @experience.photo&.attachment&.present? %>
+    <% if @experience.photo.attachment %>
       <%= cl_image_tag @experience.photo.key, height: 70, width: 70, crop: :fill, alt: "#{@experience.company}-logo" %>
-    <% else %>
+    <% elsif @experience.company_logo_url %>
       <%= image_tag @experience.company_logo_url, alt: "#{@experience.company}-logo", width: 70, height: 70, crop: :fill %>
+    <% else %>
+      <div></div>
     <% end %>
 
   </div>
