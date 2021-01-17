@@ -3,6 +3,8 @@ class Experience < ApplicationRecord
   validates :category, inclusion: { in: ["Travail", "Études", "Centres d'intérêt"] }
   validate :end_date_after_start_date
   has_one_attached :photo
+  attr_accessor :remove_photo
+  after_save { photo.purge if remove_photo == '1' }
 
   def category_enum
     ["Travail", "Études", "Centres d'intérêt"]

@@ -5,7 +5,7 @@
       <div class="col-lg-4 col-sm-6 col-10">
         <div class="skills-card p-4">
           <%= image_tag "team_work.svg", alt: "team_work", width: '100%', class: 'skills-card__image mb-3' %>
-          <% comms = Skill.where(category: "Communication") %>
+          <% comms = Skill.where(category: "Communication").order(:priority) %>
           <h1><%= comms.first.category %></h1>
           <% comms.each do |com| %>
             <p><%= com.name %></p>
@@ -15,7 +15,7 @@
       <div class="col-lg-4 col-sm-6 col-10">
         <div class="skills-card p-4">
           <%= image_tag "team_connect.svg", alt: "team_work", width: '100%', class: 'skills-card__image mb-3' %>
-          <% techs = Skill.where(category: "Technologies") %>
+          <% techs = Skill.where(category: "Technologies").order(:priority) %>
           <h1><%= techs.first.category %></h1>
           <% techs.each do |tech| %>
             <p><%= tech.name %></p>
@@ -25,7 +25,7 @@
       <div class="col-lg-4 col-sm-6 col-10">
         <div class="skills-card p-4">
           <%= image_tag "gallery.svg", alt: "team_work", width: '100%', class: 'skills-card__image mb-3' %>
-          <% softs = Skill.where(category: "Soft Skills") %>
+          <% softs = Skill.where(category: "Soft Skills").order(:priority) %>
           <h1><%= softs.first.category %></h1>
           <% softs.each do |soft| %>
             <p><%= soft.name %></p>

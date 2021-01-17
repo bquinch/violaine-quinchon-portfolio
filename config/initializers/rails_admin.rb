@@ -28,7 +28,9 @@ RailsAdmin.config do |config|
     field :description
     field :company_logo_url
     field :current
-    field :photo
+    field :photo, :active_storage do
+      delete_method :remove_photo
+    end
     field :start_date
     field :end_date
   end
@@ -40,10 +42,21 @@ RailsAdmin.config do |config|
         ["Communication", "Technologies", "Soft Skills"]
       end
     end
+    field :priority, :enum do
+      enum do
+        (1..10).to_a
+      end
+    end
   end
 
   config.model 'Resume' do
     field :description
+  end
+
+  config.model 'Cv' do
+    field :photo, :active_storage do
+      delete_method :remove_photo
+    end
   end
 
   ## == CancanCan ==
