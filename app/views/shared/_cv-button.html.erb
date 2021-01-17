@@ -1,0 +1,6 @@
+<% if Cv.count> 0 %>
+  <div class="cv-button--container">
+    <%= link_to "Voir mon cv" , rails_blob_path(Cv.last.photo, only_path: true), target: "_blank" ,
+      class: "btn-violaine-secondary cv-button" %>
+  </div>
+<% end %>
